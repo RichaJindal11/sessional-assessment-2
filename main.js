@@ -5,23 +5,18 @@
 //     alert("Photo has been Submited");
 // })
 
+const xhr = new XMLHttpRequest()
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/photos', true);
+xhr.onload= function(){
+    const response = JSON.parse(xhr.responseText);
+    for(let i=0; i<response.length; i++){
 
-document.querySelector('#search').addEventListener('click',()=>{
-    const xhr = new XMLHttpRequest();
-  
-    // const searchValue = document.querySelector("#my-text").value;
-    // console.log(searchValue)
-    const url = "https://jsonplaceholder.typicode.com/photos"
-    xhr.open('GET',url);
-
-    xhr.onreadystatechange=()=>{
-        if(xhr.readyState===4&& xhr.status===200){
-            const response = JSON.parse(xhr.responseText);
-            console.log(response)
-        }
-   
     }
-    xhr.send()
     console.log(response)
+    document.getElementById('Button1').addEventListener('click', ()=>{
+        
+    })
+    
+}
+xhr.send()
 
-})
