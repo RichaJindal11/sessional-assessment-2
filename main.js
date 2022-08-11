@@ -17,10 +17,14 @@ xhr.onload= function(){
     console.log(response[99]);
     let template ="";
     for(let i=0; i<response.length; i++){
+        let id = response[i].thumbnailUrl;
+        let title = response[i].title;
         template += `
-        <div>
-            <img src="response[${i}].url">
-            
+        <div style="text-align">
+            <img src="${id}" style="margin-right: 50px;">
+            <div style="width:150px">
+            <p style="overflow:auto">${title}</p>
+            </div>
         </div>`
        
     }
