@@ -9,13 +9,25 @@ const xhr = new XMLHttpRequest()
 xhr.open('GET', 'https://jsonplaceholder.typicode.com/photos', true);
 xhr.onload= function(){
     const response = JSON.parse(xhr.responseText);
-    for(let i=0; i<response.length; i++){
+    // for(let i=0; i<response.length; i++){
 
+    //}
+    console.log(response[0].url);
+    console.log(response[0]);
+    console.log(response[99]);
+    let template ="";
+    for(let i=0; i<response.length; i++){
+        template += `
+        <div>
+            <img src="response[${i}].url">
+            
+        </div>`
+       
     }
-    console.log(response)
-    document.getElementById('Button1').addEventListener('click', ()=>{
+    document.querySelector("#my-container").innerHTML = template
+    // document.getElementById('Button1').addEventListener('click', ()=>{      <p>resonse[${i}].title</p>
         
-    })
+    // })
     
 }
 xhr.send()
