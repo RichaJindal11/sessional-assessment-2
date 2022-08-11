@@ -1,5 +1,11 @@
+.body{
+    /* background-color: black; */
+    background-image:linear-gradient(to bottom, black, grey);
+    color:white;
+}
+
 .header-container{
-    background-color: black;
+    background-color: rgb(75, 67, 67);
     height:150px;
     width: 100%;
     display: flex;
@@ -7,6 +13,7 @@
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 2%;
+    /* position: fixed; */
 }
 .header-logo{
     height: 5px;
@@ -16,6 +23,13 @@
     height: 100px;
     width:100px;
 }
+#anchor{
+    text-decoration: none;
+
+}
+.file{
+    color:black;
+}
 .name{
     color: aliceblue;
     font: 3em sans-sarif;
@@ -23,4 +37,20 @@
 .name1{
     color:red;
     
+}
+.form-submit{
+    color:black;
+}
+.footer{
+    text-align: center;
+    padding-top: 20px;
+    height:150px;
+    width: 100%;
+    background-color: rgb(45, 41, 41);
+    color: black;
+}
+.name{
+    margin-top: 20px;
+    color:Red;
+    font-weight: bolder;
 }
